@@ -4,13 +4,31 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="container">
+            <h1 class="flex justify-center">Simple Interest Calculator</h1>
+            <div class="flex justify-center">
+                <span>Amount</span>
+                <input class="m-left-input" type="number"  id="principal"> 
+            </div>
+             <br/>
+             <div class="flex justify-center">
+                <span>Rate</span>
+                <input class="m-left-input" type="range"  id="rate">
+            </div>
+             <br/>
+             <div class="flex justify-center">
+                <span>No. of Years</span>
+                <input  class="m-left-input"type="number"  id="years">  
+            </div>
+            <br/>
+            <div class="flex justify-center">
+                <span>Interest:</span>
+                <span id="result"></span>
+            </div>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+    
+            <button onclick="compute()">Compute</button>
+        </div>
+        
     </body>
 </html>
