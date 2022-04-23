@@ -6,28 +6,63 @@
     <body>
         <div class="container">
             <h1 class="flex justify-center">Simple Interest Calculator</h1>
-            <div class="flex justify-center">
-                <span>Amount</span>
-                <input class="m-left-input" type="number"  id="principal"> 
+            <div class="w-50 m-auto">
+                <div class="flex w-75 m-auto">
+                    <span class="w-50" >Amount</span>
+                    <input oninput="handleEvent()"class="w-50 flex justify-start" type="number"  id="principal"> 
+                </div>
+                 <br/>
+                 <div class="flex w-75 m-auto">
+                    <span class="w-50" >Rate</span>
+                    <div class="w-50 flex justify-start">
+                        <input  oninput="updateTextInput(this.value);"  type="range"  id="rate" min="1" max="20" step="0.5"  value="3.5">
+                        <output id="output">3.5</output>
+                    </div >
+                  
+                </div>
+                 <br/>
+                 <div class="flex w-75 m-auto">
+                    <span class="w-50">No. of Years</span>
+                    <select onchange="handleEvent()" class="flex justify-start w-50" name="years" id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                </div>
+                <br/>
+                <div class="flex">
+                    <button onclick="compute()">Compute Interest</button>
+                </div>
+              <div id="result-container" class="result-container hidden">
+                  <div>
+                    <span>If you deposit</span>  <span id="principalOutput" class="bg-yellow">100000</span>,
+                  </div>
+                  <div>
+                    <span>at an interest rate of</span>  <span id="rateOutput" class="bg-yellow">3.5%</span>.
+                  </div>
+                  <div>
+                    <span>you will receive an amount of</span>  <span id="result" class="bg-yellow">175000</span>,
+                  </div>
+                  <div>
+                    <span>in the year</span>  <span id="yearsOutput" class="bg-yellow">2025</span> .
+                  </div>
+                 
+              </div>
+              
             </div>
-             <br/>
-             <div class="flex justify-center">
-                <span>Rate</span>
-                <input class="m-left-input" type="range"  id="rate">
-            </div>
-             <br/>
-             <div class="flex justify-center">
-                <span>No. of Years</span>
-                <input  class="m-left-input"type="number"  id="years">  
-            </div>
-            <br/>
-            <div class="flex justify-center">
-                <span>Interest:</span>
-                <span id="result"></span>
-            </div>
+            
 
-    
-            <button onclick="compute()">Compute</button>
+            <div class="py-4">
+               <span class="font-lg ">© Everyone Can Get Rich</span> 
+              </div>
+            
         </div>
         
     </body>

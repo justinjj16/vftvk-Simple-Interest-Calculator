@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  display: flex;
 }
 h1 {
   color: green;
@@ -7,6 +8,21 @@ h1 {
 .container {
   background-color: #fff;
   border-radius: 20px;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+.result-container {
+  padding: 10px 0;
+}
+.w-50 {
+  width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+.m-auto {
+  margin: auto;
 }
 .flex {
   display: flex;
@@ -14,6 +30,21 @@ h1 {
 .justify-center {
   justify-content: center;
 }
+.justify-start {
+  justify-content: start;
+}
 .m-left-input {
   margin-left: 20px;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+.font-lg {
+  font-size: large;
+}
+.hidden {
+  display: none;
+}
+.py-4 {
+  padding: 14px 0;
 }
