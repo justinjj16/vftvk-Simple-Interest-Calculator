@@ -3,7 +3,7 @@ body {
   display: flex;
 }
 h1 {
-  color: green;
+  color: #808080;
 }
 .container {
   background-color: #fff;
